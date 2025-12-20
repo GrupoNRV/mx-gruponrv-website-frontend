@@ -1,6 +1,7 @@
 import ExperienceSection from "@/components/ExperienceSection";
 import ExperienceSection2 from "@/components/ExperienceSection2";
 import Hero from "@/components/Hero";
+import TeamSection from "@/components/TeamSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -88,6 +89,7 @@ export default function Nosotros() {
           </>
         }
       />
+      <TeamSection />
       <ExperienceSection2
         imageUrl="/images/nosotros/experiencia2.jpg"
         content={
