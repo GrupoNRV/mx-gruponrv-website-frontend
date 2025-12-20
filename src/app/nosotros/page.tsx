@@ -19,8 +19,7 @@ export default function Nosotros() {
         caption={
           <>
             <h1 className="font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-              Somos una empresa líder en
-              <br /> construcción y maquinaria
+              Somos una empresa líder <br /> en construcción y maquinaria
             </h1>
           </>
         }
