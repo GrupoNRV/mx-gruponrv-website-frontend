@@ -1,9 +1,9 @@
-import ClientsSlider from "@/components/ClientsSlider";
-import ExperienceSection from "@/components/ExperienceSection";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import Hero from "@/components/Hero";
+import ClientsSlider from "@/components/sections/ClientsSlider";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import Hero from "@/components/sections/Hero";
 import { Metadata } from "next";
-import ExperienceSection2 from "@/components/ExperienceSection2";
+import ExperienceSection2 from "@/components/sections/ExperienceSection2";
 
 export const metadata: Metadata = {
   title: "Grupo NRV | Inicio",

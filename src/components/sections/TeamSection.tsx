@@ -3,29 +3,7 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useState } from "react";
-
-const team = [
-  {
-    name: "Ing. Adrian Escobar",
-    role: "Director",
-    bg: "bg-[#232323]",
-  },
-  {
-    name: "Lic. Natividad Ramón",
-    role: "Administración",
-    bg: "bg-[#005944]",
-  },
-  {
-    name: "C.P Alejandro Vargas",
-    role: "Área Fiscal",
-    bg: "bg-[#216C36]",
-  },
-  {
-    name: "Ing. Miguel A. Escobar",
-    role: "Control Administrativo",
-    bg: "bg-[#1E1E1E]",
-  },
-];
+import { team } from "@/data/team";
 
 export default function TeamSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -43,14 +21,13 @@ export default function TeamSection() {
     },
     breakpoints: {
       "(min-width: 768px)": {
-        disabled: true, // ⬅️ en desktop desactivamos el slider
+        disabled: true,
       },
     },
   });
 
   return (
     <section className="w-full relative">
-      {/* Título */}
       <div className="py-8 px-4 lg:px-12 xl:px-16 lg:py-14 xl:py-16 bg-white">
         <h2 className="text-2xl lg:text-3xl xl:text-5xl font-bold text-[#216C36]">
           Nuestro equipo
@@ -73,7 +50,6 @@ export default function TeamSection() {
           ))}
         </div>
 
-        {/* Dots */}
         {loaded && instanceRef.current && (
           <div className="flex justify-center gap-2 py-4 absolute left-1/2 -translate-x-1/2 bottom-0">
             {[...Array(instanceRef.current.track.details.slides.length)].map(
@@ -81,6 +57,7 @@ export default function TeamSection() {
                 <button
                   key={idx}
                   onClick={() => instanceRef.current?.moveToIdx(idx)}
+                  aria-label={`Ir a miembro ${idx + 1}`}
                   className={`w-2 h-2 rounded-full transition ${
                     currentSlide === idx ? "bg-white" : "bg-white/70"
                   }`}

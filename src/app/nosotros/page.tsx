@@ -1,7 +1,7 @@
-import ExperienceSection from "@/components/ExperienceSection";
-// import ExperienceSection2 from "@/components/ExperienceSection2";
-import Hero from "@/components/Hero";
-// import TeamSection from "@/components/TeamSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+// import ExperienceSection2 from "@/components/sections/ExperienceSection2";
+import Hero from "@/components/sections/Hero";
+// import TeamSection from "@/components/sections/TeamSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

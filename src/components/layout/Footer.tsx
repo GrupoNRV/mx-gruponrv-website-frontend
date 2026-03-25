@@ -17,7 +17,7 @@ export default function Footer() {
   const [isPending, startTransition] = useTransition();
   const [currentBtnCopy, setCurrentBtnCopy] = useState("Envíar");
 
-  const handleChange = ({ target }: any) => {
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setContactMessage({
       ...contactMessage,
       [target.name]: target.value,
@@ -138,7 +138,6 @@ export default function Footer() {
 
         {/* Footer bottom */}
         <div className="mt-14 text-center text-sm text-gray-300 space-y-2">
-          {/* <p>Terms & Privacy Policy</p> */}
           <p>© 2025, Todos los derechos reservados</p>
         </div>
       </div>

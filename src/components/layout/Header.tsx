@@ -48,12 +48,7 @@ export default function Header() {
               Inicio
             </Link>
 
-            {/* Trigger */}
-            <div
-              className="relative"
-              // onMouseEnter={() => setSubmenuOpen(true)}
-              // onMouseLeave={() => setSubmenuOpen(false)}
-            >
+            <div className="relative">
               <button
                 onClick={() => setSubmenuOpen(!submenuOpen)}
                 className="flex items-center gap-1 font-extrabold hover:text-[#216C36] transition cursor-pointer text-sm"

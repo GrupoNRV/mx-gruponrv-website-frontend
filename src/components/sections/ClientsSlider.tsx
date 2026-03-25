@@ -4,32 +4,10 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
 import { useState } from "react";
-
-const clients = [
-  {
-    id: 1,
-    name: "Gobierno de México",
-    logo: "/images/carousel/clients/slider1.png",
-  },
-  {
-    id: 2,
-    name: "Tren Maya",
-    logo: "/images/carousel/clients/slider2.png",
-  },
-  {
-    id: 3,
-    name: "CFE",
-    logo: "/images/carousel/clients/slider3.png",
-  },
-  {
-    id: 4,
-    name: "Pemex",
-    logo: "/images/carousel/clients/slider4.png",
-  },
-];
+import { clients } from "@/data/clients";
 
 export default function ClientsSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -58,12 +36,10 @@ export default function ClientsSlider() {
   return (
     <section className="w-full bg-white">
       <div className="py-8 px-4 lg:px-12 xl:px-16 lg:py-14 xl:py-16 relative">
-        {/* Título */}
         <h2 className="text-2xl lg:text-3xl font-bold text-[#216C36] mb-8">
           Clientes que confían en nuestra experiencia
         </h2>
 
-        {/* Slider */}
         <div className="relative flex items-center">
           {/* Flecha izquierda */}
           {loaded && instanceRef.current && (
@@ -89,7 +65,6 @@ export default function ClientsSlider() {
             </button>
           )}
 
-          {/* Contenedor slider */}
           <div ref={sliderRef} className="keen-slider w-full mx-8">
             {clients.map((client) => (
               <div
@@ -101,7 +76,7 @@ export default function ClientsSlider() {
                   alt={client.name}
                   width={160}
                   height={80}
-                  className="object-contain hover:grayscale-0 transition"
+                  className="object-contain transition"
                 />
               </div>
             ))}

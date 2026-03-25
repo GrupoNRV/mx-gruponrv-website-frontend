@@ -14,7 +14,10 @@ export default function ExperienceSection({
   bgColor,
 }: Props) {
   return (
-    <section className={bgColor ? `bg-[${bgColor}]` : "bg-section-green-nrv"}>
+    <section
+      className={bgColor ? "" : "bg-section-green-nrv"}
+      style={bgColor ? { backgroundColor: bgColor } : undefined}
+    >
       <div className="mx-auto py-8 px-4 lg:px-0 lg:py-0 lg:grid lg:grid-cols-2 lg:items-center">
         {/* Text content */}
         <div
@@ -30,8 +33,8 @@ export default function ExperienceSection({
           }`}
         >
           <Image
-            src={imageUrl} // cambia la ruta según tu proyecto
-            alt="Equipo de construcción"
+            src={imageUrl}
+            alt="Sección de experiencia"
             fill
             className="object-cover"
             priority
