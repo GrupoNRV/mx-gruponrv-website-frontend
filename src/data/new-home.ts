@@ -40,7 +40,7 @@ export const divisions: Division[] = [
     label: "División Maquinaria",
     description: "Renta y operación de maquinaria pesada.",
     link: "Conoce a Scavare",
-    images: ["/images/hero/home/slider1.jpg"],
+    images: ["/images/new-home/division-maquinaria/imagen1.jpg"],
     route: "/unidades-de-negocio/scavare",
   },
   {
