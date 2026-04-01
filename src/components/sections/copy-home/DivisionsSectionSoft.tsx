@@ -13,7 +13,7 @@ export default function DivisionsSectionSoft() {
     useScrollReveal<HTMLDivElement>();
 
   return (
-    <section className="py-10 px-4 lg:px-12 xl:px-16 lg:py-16 bg-(--color-cream)">
+    <section id="divisiones" className="py-10 px-4 lg:px-12 xl:px-16 lg:py-16 bg-(--color-cream)">
       {/* Header */}
       <div ref={headerRef} className="text-center mb-6 lg:mb-10">
         <p
