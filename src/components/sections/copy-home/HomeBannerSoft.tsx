@@ -28,7 +28,9 @@ export default function HomeBannerSoft() {
   }, []);
 
   const scrollToDivisiones = () => {
-    document.getElementById("divisiones")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("divisiones")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -50,7 +52,7 @@ export default function HomeBannerSoft() {
           <h1
             className="text-white animate-nrv-rise"
             style={{
-              fontFamily: "var(--font-syncopate)",
+              fontFamily: "var(--font-roboto-condensed)",
               fontWeight: 700,
               fontSize: "26px",
               lineHeight: 1.15,
